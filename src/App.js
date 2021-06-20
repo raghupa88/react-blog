@@ -15,11 +15,21 @@ function App() {
         <NavBar />
         <div id="page-body">
           <Switch>
-            <Route path="/" exact component={HomePage} />
-            <Route path="/about" component={AboutPage} />
-            <Route path="/articles" exact component={ArticlesListPage} />
-            <Route path="/articles/:name" component={ArticlePage} />
-            <Route component={NotFoundPage} />
+            <Route path="/" exact >
+              <HomePage />
+            </Route>
+            <Route path="/about" >
+              <AboutPage />
+            </Route>
+            <Route path="/articles" exact >
+              <ArticlesListPage />
+            </Route>
+            <Route path="/articles/:name" >
+              <ArticlePage />
+            </Route>
+            <Route >
+              <NotFoundPage />
+            </Route>
           </Switch>
         </div>
       </div>
